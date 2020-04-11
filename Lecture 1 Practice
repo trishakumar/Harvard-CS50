@@ -1,0 +1,145 @@
+#include <stdio.h>
+#include <cs50.h>
+int main()
+{
+    printf("YOU ARE THANOS. YOU'RE MISSION IS COLLECT ALL THE INFINITY STONES. THERE ARE 6 LEVELS.\n");
+    printf("\n");
+    printf("LEVEL 1. TO FIND THE SPACE STONE\n");
+    printf("[In your space ship....]\n");
+    printf("STATE YOUR DESTINATON (Enter either 1 or 2. Enter another number at your own risk. \n)");
+    int x;
+    scanf("%i", &x);
+    if(x == 1)
+    {
+        printf("YOU HAVE MADE THE RIGHT CHOICE, THANOS. ASGARD IS THE LOCATION OF THE SPACE STONE\n");
+    }
+    else if(x == 2)
+    {
+        printf("WRONG CHOICE. RESTART THE GAME\n");
+    }
+    else
+    {
+        printf("WRONG CHOICE. FOLLOW THE INSTRUCTIONS\n");
+    }
+    printf("\n");
+    string a;
+    printf("ENTER THE NAME OF THE PERSON YOU HAVE TO KILL = ");
+    scanf("%s", &a);
+    printf("\n");
+    printf("LEVEL 2. TO FIND THE REALITY STONE\n");
+    printf("[In your space ship....]\n");
+    
+    printf("STATE YOUR DESTINATON (Enter either 1 or 2. Enter another number at your own risk.) \n");
+    int y;
+    scanf("%i", &y);
+    if(y == 1)
+    {
+        printf("YOU HAVE MADE THE RIGHT CHOICE, THANOS. KNOWHERE IS THE CORRECT LOCATION OF THE REALITY STONE\n");
+    }
+    else if(y == 2)
+    {
+        printf("WRONG CHOICE. RESTART THE GAME");
+    }
+    else
+    {
+        printf("WRONG CHOICE. FOLLOW THE INSTRUCTIONS");
+    }
+    printf("\n");
+    string b;
+    printf("ENTER THE NAME OF THE PERSON YOU HAVE TO KILL = ");
+    scanf("%s", &b);
+    printf("\n");
+    printf("LEVEL 3. TO FIND THE POWER STONE\n");
+    printf("[In your space ship....]\n");
+    printf("\n");
+    printf("STATE YOUR DESTINATON (Enter either 1 or 2. Enter another number at your own risk.)");
+    int z;
+    scanf("%i", &z);
+    if(z == 1)
+    {
+        printf("YOU HAVE MADE THE RIGHT CHOICE, THANOS");
+    }
+    else if(z == 2)
+    {
+        printf("WRONG CHOICE. RESTART THE GAME");
+    }
+    else
+    {
+        printf("WRONG CHOICE. FOLLOW THE INSTRUCTIONS");
+    }
+    printf("\n");
+    string c;
+    printf("ENTER THE NAME OF THE PERSON YOU HAVE TO KILL = ");
+    scanf("%s", &c);
+    printf("\n");
+    printf("LEVEL 4. TO FIND THE SOUL STONE\n");
+    printf("[In your space ship....]\n");
+   
+    printf("STATE YOUR DESTINATON (Enter either 1 or 2. Enter another number at your own risk.)");
+    int s;
+    scanf("%d",&s);
+    if(s == 1)
+    {
+        printf("YOU HAVE MADE THE RIGHT CHOICE, THANOS");
+    }
+    else if(s == 2)
+    {
+        printf("WRONG CHOICE. RESTART THE GAME");
+    }
+    else
+    {
+        printf("WRONG CHOICE. FOLLOW THE INSTRUCTIONS");
+    }
+    printf("\n");
+    string d;
+    printf("ENTER THE NAME OF THE PERON YOU HAVE TO KILL = ");
+    scanf("%s", &d);
+    printf("\n");
+    printf("LEVEL 5. TO FIND THE TIME STONE\n");
+    printf("[In your space ship....]\n");
+    printf("\n");
+    printf("STATE YOUR DESTINATON (Enter either 1 or 2. Enter another number at your own risk.)");
+    int t;
+    scanf("%i", &t);
+    if(t == 1)
+    {
+        printf("YOU HAVE MADE THE RIGHT CHOICE, THANOS");
+    }
+    else if(t == 2)
+    {
+        printf("WRONG CHOICE. RESTART THE GAME");
+    }
+    else
+    {
+        printf("WRONG CHOICE. FOLLOW THE INSTRUCTIONS");
+    }
+    printf("\n");
+    string e;
+    printf("ENTER THE NAME OF THE PERSON YOU HAVE TO KILL = ");
+    scanf("%s", &e);
+    printf("\n");
+    printf("LEVEL 6. TO FIND THE MIND STONE\n");
+    printf("[In your space ship....]\n");
+    printf("\n");
+    printf("STATE YOUR DESTINATON (Enter either 1 or 2. Enter another number at your own risk.)");
+    int u;
+    scanf("%i", &u);
+    if(u == 1)
+    {
+        printf("YOU HAVE MADE THE RIGHT CHOICE, THANOS");
+    }
+    else if(u == 2)
+    {
+        printf("WRONG CHOICE. RESTART THE GAME");
+    }
+    else
+    {
+        printf("WRONG CHOICE. FOLLOW THE INSTRUCTIONS");
+    }
+    printf("\n");
+    string f;
+    printf("ENTER THE NAME OF THE PERSON YOU HAVE TO KILL = ");
+    scanf("%s", &f);
+    printf("\n");
+    printf("YOU HAVE WON THE GAME! YOU ARE THE MOST POWERFUL CREATURE ON THIS UNIVERSE\n");
+}
