@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
+
+char BUFFER[512];
+int BLOCK = 512;
+char CARDPATH[] = {"/home/cs50/pset5/card.raw"};
+
+typedef uint8_t BYTE; 
+BYTE jpeg1[] = { 0xff, 0xd8, 0xff, 0xe0 };
+BYTE jpeg2[] = { 0xff, 0xd8, 0xff, 0xe1 };
+
+int i =0;
+int main(void)
+{
+    FILE *fp = fopen(CARDPATH, "r");
+    if (fp == NULL)
+    {
+        printf("Could not open \n");
+        return 1;
+    }
+    
+    FILE *outptr = NULL;
+   
+     while (!(feof(fp))) 
+    {
+        fread(&BUFFER, BLOCK, 1, fp);
+       
+        int m = memcmp(BUFFER, jpeg2, 4);
+        int n = memcmp(BUFFER, jpeg1, 4);
+        
+        if((n ==0) || (m ==0))
+            {
+                if(outptr != NULL)
+                fclose(outptr);
+                
+            
+                char filename[4];
+                sprintf(filename, "%03d", i);
+         
+            
+                 outptr = fopen(filename, "w+");
+                if (outptr == NULL)
+                {
+                    fclose(fp);
+                    fprintf(stderr, "Could not create \n");
+                    return 3;
+                }
+            
+            fwrite(&BUFFER, BLOCK, 1, outptr);              
+            
+            i++;
+            }
+            else if((i>0))
+                {
+                    fwrite(&BUFFER, BLOCK, 1, outptr);
+                }
+  
+
+    }
+     fclose(fp);
+     fclose(outptr);
+     printf("Done. We found %d pictures\n", i);
+
+}    
+
